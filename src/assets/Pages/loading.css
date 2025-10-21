@@ -1,0 +1,43 @@
+.news-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 80px 0; /* keeps it middle but not fullscreen */
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.pulse-bar {
+  width: 120px;
+  height: 6px;
+  background: linear-gradient(90deg, #ff0040, #ffb300, #008cff);
+  background-size: 300% 100%;
+  border-radius: 3px;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.loading-text {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #333;
+  letter-spacing: 0.5px;
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 0% 50%;
+    transform: scaleX(0.8);
+    opacity: 0.6;
+  }
+  50% {
+    background-position: 100% 50%;
+    transform: scaleX(1.05);
+    opacity: 1;
+  }
+  100% {
+    background-position: 0% 50%;
+    transform: scaleX(0.8);
+    opacity: 0.6;
+  }
+}

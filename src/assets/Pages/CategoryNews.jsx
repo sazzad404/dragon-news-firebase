@@ -21,17 +21,17 @@ const CategoryNews = () => {
     }
   }, [id, data]);
 
-  console.log(id);
+  // console.log(id);
   return (
-    <div >
+    <div>
       <h2 className="font-bold mb-5">
         Total <span className="text-secondary">{categoryNews.length}</span> news
         Found
       </h2>
       <div className="grid grid-cols-1 gap-5">
-       {
-        categoryNews.map(news=><NewsCard key={news.id} news={news}></NewsCard>)
-       }
+        {categoryNews.map((news) => (
+          <NewsCard key={news.id} news={news}></NewsCard>
+        ))}
       </div>
     </div>
   );
