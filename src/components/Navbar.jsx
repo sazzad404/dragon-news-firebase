@@ -6,6 +6,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
   const { user, signout } = use(AuthContext);
+
   const handleLogOut = () => {
     signout()
       .then(() => {
@@ -25,7 +26,7 @@ const Navbar = () => {
         <NavLink to={"/carrier"}> Carrier</NavLink>
       </div>
       <div className="flex gap-4">
-        <img className="w-12 rounded-full" src={`${user?user.photoURl:userIcon}`} alt="" />
+        <img  className="w-10 rounded-4xl" src={user? user.photoURL : userIcon} alt="" />
         {user ? (
           <button onClick={handleLogOut} className="btn btn-primary px-10">
             Log Out
